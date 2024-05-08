@@ -1,0 +1,24 @@
+{
+   "name": "whatsapp-bot",
+   "module": "index.ts",
+   "type": "module",
+   "scripts": {
+      "dev": "npm-run-all2 --parallel  build dev:watch",
+      "dev:watch": "node build/index.js --watch",
+      "build": "bun build.ts --watch",
+      "build:watch": "bun build  src/index.ts --sourcemap=external  --target node --external @mapbox  --outdir build --watch"
+   },
+   "devDependencies": {
+      "@hapi/boom": "^10.0.1",
+      "@types/bun": "latest",
+      "npm-run-all2": "^6.1.2"
+   },
+   "peerDependencies": {
+      "typescript": "^5.0.0"
+   },
+   "dependencies": {
+      "@whiskeysockets/baileys": "^6.7.2",
+      "chokidar": "^3.6.0",
+      "qrcode-terminal": "^0.12.0"
+   }
+}
