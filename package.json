@@ -34,6 +34,6 @@
     "node": "22.x"
   },
   "lint-staged": {
-    "**/*": "bun run lint"
+    "**/*": "bun run format && bun run lint"
   }
 }
