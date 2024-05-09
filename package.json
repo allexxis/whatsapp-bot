@@ -7,7 +7,7 @@
     "dev:watch": "node build/index.js --watch",
     "build": "bun build.ts --watch",
     "lint": "eslint  src/**/*.ts",
-    "format": "eslint src/**/*.ts --fix"
+    "format": "bun prettier . --write --ignore-unknown && eslint src/**/*.ts --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
@@ -17,6 +17,7 @@
     "eslint": "^9.2.0",
     "globals": "^15.2.0",
     "npm-run-all2": "^6.1.2",
+    "prettier": "3.2.5",
     "typescript-eslint": "^7.8.0"
   },
   "peerDependencies": {
