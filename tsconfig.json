@@ -5,7 +5,6 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
-    "jsx": "react-jsx",
     "allowJs": true,
 
     // Bundler mode
@@ -24,9 +23,12 @@
     "noUnusedParameters": true,
     "noPropertyAccessFromIndexSignature": false,
     "baseUrl": ".",
+
     "paths": {
       "repo/*": ["./*"],
       "@src/*": ["./src/*"]
     }
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", ".husky", ".vscode", "./**/.json", "tsconfig.json"]
 }

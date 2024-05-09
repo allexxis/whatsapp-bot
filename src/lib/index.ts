@@ -1,5 +1,4 @@
-const fu = (app: number) => {
-  return app;
+const test = () => {
+  return 'ok';
 };
-
-fu('alexis');
+export default test;

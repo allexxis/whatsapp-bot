@@ -7,6 +7,7 @@
     "dev:watch": "node build/index.js --watch",
     "build": "bun build.ts --watch",
     "lint": "eslint  src/**/*.ts",
+    "typecheck": "tsc  --noEmit -p .",
     "format": "bun prettier . --write --ignore-unknown && eslint src/**/*.ts --fix",
     "prepare": "husky"
   },
