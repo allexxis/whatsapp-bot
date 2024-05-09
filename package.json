@@ -7,7 +7,8 @@
     "dev:watch": "node build/index.js --watch",
     "build": "bun build.ts --watch",
     "lint": "eslint  src/**/*.ts",
-    "format": "bun prettier . --write --ignore-unknown && eslint src/**/*.ts --fix"
+    "format": "bun prettier . --write --ignore-unknown && eslint src/**/*.ts --fix",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
@@ -16,6 +17,8 @@
     "chokidar": "^3.6.0",
     "eslint": "^9.2.0",
     "globals": "^15.2.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
     "prettier": "3.2.5",
     "typescript-eslint": "^7.8.0"
@@ -29,5 +32,8 @@
   },
   "engines": {
     "node": "22.x"
+  },
+  "lint-staged": {
+    "**/*": "bun run lint"
   }
 }
