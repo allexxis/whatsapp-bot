@@ -6,16 +6,18 @@
     "dev": "npm-run-all2 --parallel  build dev:watch",
     "dev:watch": "node build/index.js --watch",
     "build": "bun build.ts --watch",
-    "build:watch": "bun build  src/index.ts --sourcemap=external  --target node --external @mapbox  --outdir build --watch"
+    "lint": "eslint  src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix"
   },
   "devDependencies": {
+    "@eslint/js": "^9.2.0",
     "@hapi/boom": "^10.0.1",
     "@types/bun": "latest",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "eslint": "^9.2.0",
     "chokidar": "^3.6.0",
-    "npm-run-all2": "^6.1.2"
+    "eslint": "^9.2.0",
+    "globals": "^15.2.0",
+    "npm-run-all2": "^6.1.2",
+    "typescript-eslint": "^7.8.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
